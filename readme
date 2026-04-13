@@ -1,0 +1,24 @@
+# Majestic Events & Protocols Web Platform 👑
+- live deom: [https://majestic-event-protocols.vercel.app/](https://majestic-event-protocols.vercel.app/) **Motto:** Poised, Prepared, and Purpose Driven.
+
+This is the official digital home for **Majestic Events & Protocols**, a premier event planning agency specializing in high-end coordination, professional ushering, and ceremonial hosting.
+
+## 🛠 Tech Stack
+- **Frontend:** Next.js / React.js
+- **Styling:** Tailwind CSS (Custom Gold/Brown Theme)
+- **Animations:** Framer Motion (for "Majestic" transitions)
+- **Icons:** Lucide React / FontAwesome
+- **Deployment:** Vercel
+
+## ✨ Key Features
+- **Heroic Landing:** High-impact visual storytelling of luxury events.
+- **Service Portfolio:** Detailed breakdown of planning, ushering, and MC services.
+- **Dynamic Gallery:** Optimized image masonry for event showcases.
+- **Lead Generation:** Integrated contact forms and floating WhatsApp communication.
+- **Fully Responsive:** Seamless experience from mobile to 4K displays.
+
+## 🎨 Design System
+- **Primary:** `#A68946` (Majestic Brown)
+- **Secondary:** `#FFFFFF` (Pure White)
+- **Accent:** `#000000` (Royal Black)
+
