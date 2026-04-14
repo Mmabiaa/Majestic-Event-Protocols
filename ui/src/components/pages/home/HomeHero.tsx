@@ -10,7 +10,7 @@ export function HomeHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src='https://i.pinimg.com/1200x/6a/4a/f3/6a4af33fb94b1f2cf8512c6ad436b1b8.jpg'
+          src='https://i.pinimg.com/1200x/43/53/bb/4353bb19b3b96eefdf6df79957c06008.jpg'
           alt="Elegant event venue"
           className="w-full h-full object-cover"
           width={1920}
