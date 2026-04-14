@@ -65,9 +65,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <span className="md:hidden font-heading text-sm font-bold text-foreground absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-          Majestic Events
-        </span>
+        
         <button
           className="md:hidden text-foreground flex-shrink-0"
           onClick={() => setMobileOpen(!mobileOpen)}
