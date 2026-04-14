@@ -8,14 +8,6 @@ import eventReception from "@/assets/event-reception.jpg";
 import eventUshering from "@/assets/event-ushering.jpg";
 
 export const Route = createFileRoute("/events")({
-  head: () => ({
-    meta: [
-      { title: "Our Events — Majestic Events & Protocols" },
-      { name: "description", content: "Browse our portfolio of weddings, corporate events, traditional ceremonies and special celebrations." },
-      { property: "og:title", content: "Our Events — Majestic Events & Protocols" },
-      { property: "og:description", content: "See our stunning event portfolio showcasing weddings, galas, and ceremonies." },
-    ],
-  }),
   component: EventsPage,
 });
 

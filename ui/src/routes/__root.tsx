@@ -1,10 +1,7 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-import appCss from "../styles.css?url";
-import indexCss from "../../index.css?url";
 
 function NotFoundComponent() {
   return (
@@ -31,41 +28,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Majestic Events & Protocols — Poised, Prepared and Purpose Driven" },
-      { name: "description", content: "Premium event coordination, planning, and protocol services. Weddings, corporate events, traditional ceremonies and more." },
-      { name: "author", content: "Majestic Events & Protocols" },
-      { property: "og:title", content: "Majestic Events & Protocols" },
-      { property: "og:description", content: "Poised, Prepared and Purpose Driven — Premium event coordination and planning services." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-    links: [
-      { rel: "stylesheet", href: indexCss },
-      { rel: "stylesheet", href: appCss },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (

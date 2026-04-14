@@ -4,14 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Phone, Instagram, Send } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us — Majestic Events & Protocols" },
-      { name: "description", content: "Get in touch with Majestic Events & Protocols. Let's plan something memorable together." },
-      { property: "og:title", content: "Contact Us — Majestic Events & Protocols" },
-      { property: "og:description", content: "Reach out to plan your next unforgettable event." },
-    ],
-  }),
   component: ContactPage,
 });
 

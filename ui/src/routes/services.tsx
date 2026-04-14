@@ -8,14 +8,6 @@ import serviceMc from "@/assets/service-mc.jpg";
 import serviceTraditional from "@/assets/service-traditional.jpg";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Our Services — Majestic Events & Protocols" },
-      { name: "description", content: "Professional event coordination, planning, ushering, MC hosting, and traditional ceremony services." },
-      { property: "og:title", content: "Our Services — Majestic Events & Protocols" },
-      { property: "og:description", content: "Delivering excellence through structured planning and professional coordination." },
-    ],
-  }),
   component: ServicesPage,
 });
 
