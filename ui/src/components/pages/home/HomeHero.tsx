@@ -19,14 +19,9 @@ export function HomeHero() {
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
       </div>
 
-      {/* Left-side logo + text + buttons */}
-      <div className="relative z-10 flex flex-col items-start justify-center px-8 md:px-12 lg:px-16 py-12 w-full">
-        <div className="max-w-xl">
-          <img
-            src={logo}
-            alt="MEP Logo"
-            className="h-28 md:h-36 mb-8 animate-fade-in"
-          />
+      {/* Centered content */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-8 md:px-12 lg:px-16 py-12 w-full text-center">
+        <div className="max-w-4xl mx-auto">
           <p className="text-gold-light font-body text-lg md:text-xl tracking-[0.3em] uppercase mb-4 animate-fade-in-up opacity-0 animation-delay-200">
             Poised, Prepared and Purpose Driven
           </p>
@@ -34,8 +29,8 @@ export function HomeHero() {
             Creating Unforgettable Experiences
           </h1>
           
-          {/* Buttons - now below the text on same line on desktop */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12 animate-fade-in-up opacity-0 animation-delay-600">
+          {/* Buttons - centered and responsive */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12 justify-center animate-fade-in-up opacity-0 animation-delay-600">
             <Link to="/services">
               <Button variant="hero" size="lg" className="rounded-full px-8 text-base">
                 View Services <ArrowRight size={18} />
