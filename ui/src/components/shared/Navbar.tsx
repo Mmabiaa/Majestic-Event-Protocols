@@ -40,6 +40,7 @@ export default function Navbar() {
             alt="Majestic Events & Protocols"
             className={`transition-all duration-500 ${scrolled ? "h-8" : "h-10"}`}
           />
+          <span className="font-heading text-sm font-bold text-foreground">Majestic Events & Protocols</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
