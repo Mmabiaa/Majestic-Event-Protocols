@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 function NotFoundComponent() {
   return (
@@ -35,7 +35,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Outlet />
       <Footer />
       <WhatsAppButton />

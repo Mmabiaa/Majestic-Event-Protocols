@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="grid grid-cols-3 gap-6 md:gap-12 items-start">
-          {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
             <img src={logo} alt="Majestic Events & Protocols" className="h-10 md:h-12 brightness-0 invert" />
             <span className="font-heading text-xs md:text-sm font-semibold text-center md:text-left leading-tight">
@@ -18,7 +17,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-heading text-xs md:text-sm font-semibold mb-2 md:mb-3">Quick Links</h4>
             <ul className="space-y-1">
@@ -40,7 +38,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-heading text-xs md:text-sm font-semibold mb-2 md:mb-3">Contact</h4>
             <div className="space-y-1">
