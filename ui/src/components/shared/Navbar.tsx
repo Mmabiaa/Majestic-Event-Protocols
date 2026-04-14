@@ -40,6 +40,7 @@ export default function Navbar() {
             alt="Majestic Events & Protocols"
             className={`transition-all duration-500 ${scrolled ? "h-8" : "h-10"}`}
           />
+          <span className="font-heading text-sm font-bold text-foreground">Majestic Events & Protocols</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -64,9 +65,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <span className="md:hidden font-heading text-sm font-bold text-foreground absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-          Majestic Events
-        </span>
+        
         <button
           className="md:hidden text-foreground flex-shrink-0"
           onClick={() => setMobileOpen(!mobileOpen)}

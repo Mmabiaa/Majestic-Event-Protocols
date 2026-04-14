@@ -8,7 +8,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="grid grid-cols-3 gap-6 md:gap-12 items-start">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <img src={logo} alt="Majestic Events & Protocols" className="h-10 md:h-12 brightness-0 invert" />
+          <img
+            src={logo}
+            alt="Majestic Events & Protocols"
+            className={`transition-all duration-500 h-10`}
+          />
             <span className="font-heading text-xs md:text-sm font-semibold text-center md:text-left leading-tight">
               Majestic Events & Protocols
             </span>
