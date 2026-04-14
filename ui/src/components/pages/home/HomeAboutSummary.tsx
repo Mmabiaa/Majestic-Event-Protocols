@@ -1,3 +1,5 @@
+import aboutImg from "@/assets/events/3.jpeg";
+
 export function HomeAboutSummary() {
   return (
     <section className="py-16 px-6">
@@ -21,7 +23,7 @@ export function HomeAboutSummary() {
           {/* CARD 2: Image */}
           <div className="rounded-2xl shadow-lg overflow-hidden">
             <img 
-              src="https://i.pinimg.com/1200x/8d/86/9c/8d869cd1f8f314ac1a6d9e6791bcfebe.jpg"
+              src={aboutImg}
               alt="Elegant event setup"
               className="w-full h-64 object-cover"
             />
