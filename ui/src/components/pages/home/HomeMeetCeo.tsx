@@ -1,4 +1,4 @@
-import ceoImg from "@/assets/events/2.jpeg";
+import ceoImg from "@/assets/people/ceo.jpeg";
 
 export function HomeMeetCeo() {
   return (
@@ -11,19 +11,17 @@ export function HomeMeetCeo() {
           <div className="w-20 h-1 bg-gold mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="rounded-2xl shadow-lg overflow-hidden border border-border bg-card">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="rounded-2xl shadow-lg overflow-hidden border border-border bg-card aspect-square">
             <img
               src={ceoImg}
               alt="Majestic Events & Protocols CEO"
               loading="lazy"
-              width={900}
-              height={700}
-              className="w-full h-72 md:h-[420px] object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
 
-          <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+          <div className="bg-card rounded-2xl p-8 shadow-sm border border-border aspect-square flex flex-col justify-center">
             <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
               Leadership with elegance and excellence
             </h3>
