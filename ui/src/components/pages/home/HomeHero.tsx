@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-home.jpg";
-import logo from "@/assets/logo.png";
+
 
 export function HomeHero() {
   return (
