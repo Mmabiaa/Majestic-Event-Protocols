@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-export default function Header() {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -34,7 +34,6 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
-        {/* Logo - left */}
         <Link to="/" className="flex items-center gap-2 flex-shrink-0">
           <img
             src={logo}
@@ -43,7 +42,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop nav - center */}
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
@@ -58,7 +56,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA - right (desktop) */}
         <div className="hidden md:block flex-shrink-0">
           <Link to="/contact">
             <Button variant="gold" size="sm" className="rounded-full px-6">
@@ -67,7 +64,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile: org name center + hamburger right */}
         <span className="md:hidden font-heading text-sm font-bold text-foreground absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
           Majestic Events
         </span>
@@ -80,7 +76,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile nav */}
       {mobileOpen && (
         <nav className="md:hidden px-4 pb-3 pt-1 flex flex-col gap-2 animate-fade-in">
           {navLinks.map((link) => (
