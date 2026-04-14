@@ -1,8 +1,6 @@
 {
-  "buildCommand": "cd ui && bun run build",
-  "outputDirectory": "ui/dist/client",
-  "installCommand": "cd ui && bun install",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "buildCommand": "npm run build --prefix ui",
+  "outputDirectory": "ui/dist",
+  "installCommand": "npm install --prefix ui",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
