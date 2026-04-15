@@ -4,7 +4,7 @@ import serviceCoordination from "@/assets/people/1.jpeg";
 import servicePlanning from "@/assets/people/2.jpeg";
 import serviceUshering from "@/assets/people/3.jpeg";
 import serviceMc from "@/assets/people/4.jpeg";
-import serviceTraditional from "@/assets/service-traditional.jpg";
+import serviceTraditional from "@/assets/people/5.jpeg";
 
 export type ServiceEntry = {
   icon: LucideIcon;
