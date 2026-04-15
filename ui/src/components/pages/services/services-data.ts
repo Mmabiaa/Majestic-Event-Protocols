@@ -1,9 +1,9 @@
 import type { LucideIcon } from "lucide-react";
 import { Crown, Clock, Star, Heart, Users } from "lucide-react";
-import serviceCoordination from "@/assets/service-coordination.jpg";
-import servicePlanning from "@/assets/service-planning.jpg";
-import serviceUshering from "@/assets/service-ushering.jpg";
-import serviceMc from "@/assets/service-mc.jpg";
+import serviceCoordination from "@/assets/people/1.jpeg";
+import servicePlanning from "@/assets/people/2.jpeg";
+import serviceUshering from "@/assets/people/3.jpeg";
+import serviceMc from "@/assets/people/4.jpeg";
 import serviceTraditional from "@/assets/service-traditional.jpg";
 
 export type ServiceEntry = {
