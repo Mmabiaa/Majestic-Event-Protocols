@@ -13,7 +13,6 @@ export function HomePage() {
       <HomeMeetCeo />
       <HomeServicesPreview />
       <HomeWhyChooseUs />
-      <HomeCta />
     </main>
   );
 }
