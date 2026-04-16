@@ -11,10 +11,36 @@ export function ContactMessageForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = (await res.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
+
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "Failed to send message. Please try again.");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", email: "", eventType: "", message: "" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -32,6 +58,11 @@ export function ContactMessageForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
+          {error && (
+            <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+              {error}
+            </div>
+          )}
           <div>
             <label className="block text-sm font-medium text-foreground mb-1.5">Full Name</label>
             <input
@@ -90,8 +121,8 @@ export function ContactMessageForm() {
               className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all resize-none"
             />
           </div>
-          <Button type="submit" variant="gold" size="lg" className="rounded-full w-full">
-            Send Message
+          <Button type="submit" variant="gold" size="lg" className="rounded-full w-full" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
       )}
