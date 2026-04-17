@@ -7,6 +7,7 @@ const EVENT_CATEGORY_BY_FOLDER = {
   conference: "Conference",
   coordination: "Coordination",
   dowry: "Dowry",
+  funeral: "Funeral",
   hospitality: "Hospitality",
   planning: "Planning",
   ushering: "Ushering",
