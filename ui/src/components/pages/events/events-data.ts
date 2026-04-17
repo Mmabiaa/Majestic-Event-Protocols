@@ -68,4 +68,4 @@ export const galleryEvents: EventGalleryItem[] = Object.entries(eventImageModule
     title: titleFromPath(path),
     category: categoryFromPath(path),
   }))
-  .sort((a, b) => a.title.localeCompare(b.title));
+  .sort(() => Math.random() - 0.5);
