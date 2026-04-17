@@ -1,17 +1,70 @@
-import eventUshering from "@/assets/events/ushering/1.jpeg";
-export const eventCategories = ["All", "Weddings", "Corporate", "Traditional", "Celebrations"] as const;
+const EVENT_CATEGORY_BY_FOLDER = {
+  activations: "Activations",
+  airport: "Airport",
+  bilingual: "Bilingual",
+  birthday: "Birthday",
+  conference: "Conference",
+  coordination: "Coordination",
+  dowry: "Dowry",
+  hospitality: "Hospitality",
+  planning: "Planning",
+  ushering: "Ushering",
+  waiting: "Waiting",
+} as const;
+
+export const eventCategories = ["All", ...Object.values(EVENT_CATEGORY_BY_FOLDER)] as const;
+
+export type EventCategory = Exclude<(typeof eventCategories)[number], "All">;
 
 export type EventGalleryItem = {
   src: string;
   title: string;
-  category: string;
+  category: EventCategory;
 };
 
-export const galleryEvents: EventGalleryItem[] = [
-  { src: 'https://i.pinimg.com/736x/ce/ff/3d/ceff3d1743ad3e000234e87f217085e4.jpg', title: "Elegant Garden Wedding", category: "Weddings" },
-  { src: 'https://i.pinimg.com/1200x/43/53/bb/4353bb19b3b96eefdf6df79957c06008.jpg', title: "Corporate Gala Dinner", category: "Corporate" },
-  { src: 'https://i.pinimg.com/1200x/f2/7e/1f/f27e1f783898dbc1247d2477f729ca24.jpg', title: "Traditional Ceremony", category: "Traditional" },
-  { src: 'https://i.pinimg.com/736x/d2/fe/f9/d2fef9336dade16060f5e0c960ba7fe4.jpg', title: "Birthday Celebration", category: "Celebrations" },
-  { src: 'https://i.pinimg.com/736x/32/58/8d/32588d8f4184417b347db4fda53bfa01.jpg', title: "Wedding Reception", category: "Weddings" },
-  { src: eventUshering, title: "Professional Ushering", category: "Corporate" },
-];
+const eventImageModules = import.meta.glob<{ default: string }>(
+  "/src/assets/events/**/*.{jpg,jpeg,png,webp,gif}",
+  { eager: true },
+);
+
+function toTitleCase(value: string) {
+  return value
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function categoryFromPath(path: string): EventCategory {
+  const normalized = path.replaceAll("\\", "/").toLowerCase();
+  const match = normalized.match(/\/assets\/events\/([^/]+)\//);
+  const folder = (match?.[1] ?? "other") as keyof typeof EVENT_CATEGORY_BY_FOLDER;
+
+  if (folder in EVENT_CATEGORY_BY_FOLDER) return EVENT_CATEGORY_BY_FOLDER[folder];
+
+  // Best-effort fallback; keep the UI working and log a clue in dev.
+  if (import.meta.env.DEV) {
+    // eslint-disable-next-line no-console
+    console.warn(`[events-data] Unknown events folder "${folder}" for path: ${path}`);
+  }
+  return "Other" as EventCategory;
+}
+
+function titleFromPath(path: string) {
+  const normalized = path.replaceAll("\\", "/");
+  const parts = normalized.split("/").filter(Boolean);
+  const folder = parts.at(-2) ?? "Event";
+  const file = parts.at(-1) ?? "Photo";
+  const base = file.replace(/\.[^.]+$/, "");
+  if (/^\d+$/.test(base)) return toTitleCase(folder);
+  if (base.toLowerCase() === "hero") return `${toTitleCase(folder)} Hero`;
+  return toTitleCase(`${folder} ${base}`);
+}
+
+export const galleryEvents: EventGalleryItem[] = Object.entries(eventImageModules)
+  .map(([path, mod]) => ({
+    src: mod.default,
+    title: titleFromPath(path),
+    category: categoryFromPath(path),
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title));
