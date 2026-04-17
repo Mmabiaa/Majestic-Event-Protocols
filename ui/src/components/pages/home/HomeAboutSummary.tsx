@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/events/activations/4.jpeg";
+import aboutImg from "@/assets/events/hospitality/2.jpeg";
 
 export function HomeAboutSummary() {
   return (

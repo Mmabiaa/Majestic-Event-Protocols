@@ -4,7 +4,7 @@ import serviceCoordination from "@/assets/events/coordination/1.jpeg";
 import serviceUshering from "@/assets/events/ushering/1.jpeg";
 import servicePlanning from "@/assets/events/planning/1.jpeg";
 import serviceAirport from "@/assets/events/airport/1.jpeg";
-import serviceHospitality from "@/assets/events/hospitality/1.jpeg";
+import serviceHospitality from "@/assets/events/hospitality/2.jpeg";
 import serviceBilingual from "@/assets/events/bilingual/1.jpeg";
 import serviceDowry from "@/assets/events/dowry/1.jpeg";
 import serviceWaiting from "@/assets/events/waiting/1.jpeg";
