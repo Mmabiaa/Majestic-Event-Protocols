@@ -1,6 +1,7 @@
 const EVENT_CATEGORY_BY_FOLDER = {
   activations: "Activations",
   airport: "Airport",
+  awards: "Awards",
   bilingual: "Bilingual",
   birthday: "Birthday",
   conference: "Conference",
