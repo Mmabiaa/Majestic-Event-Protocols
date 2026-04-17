@@ -26,7 +26,7 @@ const reasons = [
 export function HomeWhyChooseUs() {
   return (
     <section className="py-16 sm:py-24 px-6 font-sans">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
