@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-10 flex items-center justify-between h-16 sm:h-20">
 
-        {/* Logo */}
+        {/* Logo & Agency Name - NOW VISIBLE ON ALL DEVICES */}
         <Link to="/" className="flex items-center gap-3 flex-shrink-0">
           <img
             src={logo}
@@ -40,7 +40,9 @@ export default function Navbar() {
             className={`transition-all duration-500 ${scrolled ? "h-7" : "h-9"}`}
           />
           <span
-            className={`hidden sm:block text-sm font-semibold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}
+            className={`text-sm font-semibold leading-tight transition-colors duration-300 ${
+              scrolled ? "text-foreground" : "text-white"
+            }`}
             style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: "0.04em" }}
           >
             Majestic Events &amp; Protocols
