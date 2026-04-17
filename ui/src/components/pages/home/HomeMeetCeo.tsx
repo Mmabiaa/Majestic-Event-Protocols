@@ -26,7 +26,7 @@ export function HomeMeetCeo() {
               Leadership with elegance and excellence
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Majestic Events & Protocols is driven by a passion for premium guest experience and seamless event execution. Our CEO leads with professionalism, attention to detail, and a commitment to ensuring every event feels refined, organized, and unforgettable.
+              Majestic Events & Protocols is driven by a passion for premium guest experience and seamless event execution. Our CEO leads with professionalism, attention to detail, and a commitment to ensuring that every event feels refined, organized, and unforgettable.
             </p>
           </div>
         </div>
