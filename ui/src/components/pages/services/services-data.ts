@@ -1,11 +1,11 @@
 import type { LucideIcon } from "lucide-react";
 import { Crown, Clock, Star, Heart, Users } from "lucide-react";
-import serviceCoordination from "@/assets/people/6.jpeg";
+import serviceCoordination from "@/assets/events/coordination/1.jpeg";
 import serviceUshering from "@/assets/events/ushering/1.jpeg";
 import servicePlanning from "@/assets/events/planning/1.jpeg";
 import serviceAirport from "@/assets/events/airport/1.jpeg";
 import serviceHospitality from "@/assets/events/hospitality/1.jpeg";
-import serviceBilingual from "@/assets/people/1.jpeg";
+import serviceBilingual from "@/assets/events/bilingual/1.jpeg";
 import serviceDowry from "@/assets/events/dowry/1.jpeg";
 import serviceWaiting from "@/assets/events/waiting/1.jpeg";
 import serviceActivations from "@/assets/events/activations/1.jpeg";
