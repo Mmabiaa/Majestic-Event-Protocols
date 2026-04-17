@@ -100,7 +100,7 @@ export const services: ServiceEntry[] = [
   },
   {
     icon: Star,
-    title: "MCing Services",
+    title: "MC Services",
     description:
       "Experienced and engaging Masters of Ceremony to host your events with confidence, charisma, and professionalism, ensuring a lively and well-coordinated program.",
     image: serviceMC,
