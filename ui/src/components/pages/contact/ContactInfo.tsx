@@ -1,4 +1,4 @@
-import { Phone, Instagram } from "lucide-react";
+import { Phone, Instagram, Mail } from "lucide-react";
 
 const contacts = [
   { href: "tel:0242907335", Icon: Phone, label: "Phone", value: "0242 907 335" },
@@ -8,6 +8,13 @@ const contacts = [
     Icon: Instagram,
     label: "Instagram",
     value: "@majestic_events_protocols",
+    external: true,
+  },
+  {
+    href: "mailto:akuaabena1000001@gmail.com",
+    Icon: Mail,
+    label: "Email",
+    value: "akuaabena1000001@gmail.com",
     external: true,
   },
 ];
