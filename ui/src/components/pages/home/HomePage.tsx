@@ -3,6 +3,7 @@ import { HomeAboutSummary } from "./HomeAboutSummary";
 import { HomeMeetCeo } from "./HomeMeetCeo";
 import { HomeServicesPreview } from "./HomeServicesPreview";
 import { HomeWhyChooseUs } from "./HomeWhyChooseUs";
+import { HomeAward } from "./HomeAward";
 
 
 export function HomePage() {
@@ -11,6 +12,7 @@ export function HomePage() {
       <HomeHero />
       <HomeAboutSummary />
       <HomeMeetCeo />
+      <HomeAward />
       <HomeServicesPreview />
       <HomeWhyChooseUs />
     </main>
