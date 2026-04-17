@@ -1,12 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { Crown, Clock, Heart, Star, ArrowRight } from "lucide-react";
+import { Crown, Clock, Heart, Star, ArrowRight, Plane, Users, Building, Languages, Mic, Gift } from "lucide-react";
 
 const previewServices = [
-  { icon: Crown, title: "Events Coordination", desc: "Managing event timelines and execution processes with precision." },
-  { icon: Clock, title: "Events Planning", desc: "Full event concept development and planning support." },
-  { icon: Star, title: "Ushering Services", desc: "Professional ushering support for ceremonies and corporate events." },
-  { icon: Heart, title: "MC / Hosting", desc: "Experienced and engaging event hosting services." },
-  { icon: Crown, title: "Dowry Bearing", desc: "Support for traditional marriage ceremonies and bridesmaid duties." },
+  { icon: Clock, title: "Event Planning", desc: "Full event concept development and planning support." },
+  { icon: Crown, title: "Event Coordination", desc: "Managing event timelines and execution processes with precision." },
+  { icon: Heart, title: "Dowry Bearing", desc: "Support for traditional marriage ceremonies and bridesmaid duties." },
+  { icon: Star, title: "Event Ushering", desc: "Professional ushering support for ceremonies and corporate events." },
+  { icon: Gift, title: "Activations", desc: "Creative brand activations and experiential marketing events." },
+  { icon: Users, title: "Waiting Services", desc: "Attentive hospitality staff for guest reception and service." },
+  { icon: Building, title: "Conference & Exhibition Assistance", desc: "Comprehensive support for conferences, trade shows, and exhibitions." },
+  { icon: Plane, title: "Airport Pickup", desc: "Seamless guest arrival coordination and welcome services." },
+  { icon: Crown, title: "Hospitality Management", desc: "End-to-end hospitality operations and guest experience management." },
+  { icon: Languages, title: "Bilingual Services", desc: "Professional multilingual support for international events." },
 ] as const;
 
 export function HomeServicesPreview() {
