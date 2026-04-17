@@ -7,7 +7,7 @@ import { EventsLightbox } from "./EventsLightbox";
 
 export function EventsPage() {
   const [selected, setSelected] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState<(typeof eventCategories)[number]>("All");
 
   const filtered = activeCategory === "All" ? galleryEvents : galleryEvents.filter((e) => e.category === activeCategory);
 
