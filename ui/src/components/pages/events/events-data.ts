@@ -10,25 +10,9 @@ const EVENT_CATEGORY_BY_FOLDER = {
   planning: "Planning",
   ushering: "Ushering",
   waiting: "Waiting",
-  other: "Other",
 } as const;
 
-const EVENT_CATEGORY_ORDER: (keyof typeof EVENT_CATEGORY_BY_FOLDER)[] = [
-  "airport",
-  "ushering",
-  "conference",
-  "coordination",
-  "activations",
-  "hospitality",
-  "planning",
-  "waiting",
-  "bilingual",
-  "dowry",
-  "birthday",
-  "other",
-];
-
-export const eventCategories = ["All", ...EVENT_CATEGORY_ORDER.map((k) => EVENT_CATEGORY_BY_FOLDER[k])] as const;
+export const eventCategories = ["All", ...Object.values(EVENT_CATEGORY_BY_FOLDER)] as const;
 
 export type EventCategory = Exclude<(typeof eventCategories)[number], "All">;
 
@@ -63,7 +47,7 @@ function categoryFromPath(path: string): EventCategory {
     // eslint-disable-next-line no-console
     console.warn(`[events-data] Unknown events folder "${folder}" for path: ${path}`);
   }
-  return EVENT_CATEGORY_BY_FOLDER.other;
+  return "Other" as EventCategory;
 }
 
 function titleFromPath(path: string) {
