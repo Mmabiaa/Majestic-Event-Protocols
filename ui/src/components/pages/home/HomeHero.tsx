@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/events/hero.jpeg";
+import heroImg from "@/assets/events/birthday/hero.jpeg";
 
 export function HomeHero() {
   return (
