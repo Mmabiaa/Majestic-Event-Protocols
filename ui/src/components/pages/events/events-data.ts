@@ -1,4 +1,4 @@
-import eventUshering from "@/assets/events/1.jpeg";
+import eventUshering from "@/assets/events/ushering/1.jpeg";
 export const eventCategories = ["All", "Weddings", "Corporate", "Traditional", "Celebrations"] as const;
 
 export type EventGalleryItem = {
