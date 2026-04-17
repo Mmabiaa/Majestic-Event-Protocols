@@ -10,6 +10,8 @@ import serviceDowry from "@/assets/events/dowry/2.jpeg";
 import serviceWaiting from "@/assets/events/waiting/1.jpeg";
 import serviceActivations from "@/assets/events/activations/1.jpeg";
 import serviceConference from "@/assets/events/awards/1.jpeg";
+import serviceMC from "@/assets/events/mc/1.jpeg";
+import serviceFuneral from "@/assets/events/funeral/1.jpeg";
 
 export type ServiceEntry = {
   icon: LucideIcon;
@@ -89,4 +91,18 @@ export const services: ServiceEntry[] = [
       "Fluent bilingual staff and MCs to bridge language barriers at international events. We provide seamless communication support for diverse audiences.",
     image: serviceBilingual,
   },
+  {
+    icon: Star,
+    title: "Funeral Services",
+    description:
+      "Professional funeral coordination and support services to ensure a respectful and well-organized farewell. We handle planning, protocol, and smooth execution during this sensitive time.",
+    image: serviceFuneral,
+  },
+  {
+    icon: Star,
+    title: "MCing Services",
+    description:
+      "Experienced and engaging Masters of Ceremony to host your events with confidence, charisma, and professionalism, ensuring a lively and well-coordinated program.",
+    image: serviceMC,
+  }
 ];
