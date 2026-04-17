@@ -9,7 +9,7 @@ import serviceBilingual from "@/assets/events/bilingual/1.jpeg";
 import serviceDowry from "@/assets/events/dowry/1.jpeg";
 import serviceWaiting from "@/assets/events/waiting/1.jpeg";
 import serviceActivations from "@/assets/events/activations/1.jpeg";
-import serviceConference from "@/assets/events/conference/1.jpeg";
+import serviceConference from "@/assets/events/awards/1.jpeg";
 
 export type ServiceEntry = {
   icon: LucideIcon;
